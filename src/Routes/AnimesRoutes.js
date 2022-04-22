@@ -6,6 +6,9 @@ const router = express.Router();
 
 router
   .get("/animes", AnimesController.ListarAnimes)
-  .post("/animes", AnimesController.CadastrarAnime);
+  .get("/animes/:id", AnimesController.ListarAnimesPorId)
+  .post("/animes", AnimesController.CadastrarAnime)
+  .put("/animes/:id", AnimesController.AtualizarAnime)
+  .delete("/animes/:id", AnimesController.ExcluirAnime);
 
 export default router;
